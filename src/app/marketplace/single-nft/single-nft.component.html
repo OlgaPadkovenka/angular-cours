@@ -1,10 +1,15 @@
 <div class="card" style="width: 18rem;">
-    <img [src]="nft.cached_file_url" class="card-img-top" alt="{{nft.metadata!.name}}">
-    <div class="card-body">
+  <img [src]="nft.cached_file_url" class="card-img-top" alt="{{nft.metadata!.name}}">
+  <div class="card-body">
+    <div class="d-flex justify-content-between">
       <h5 class="card-title">{{nft.metadata!.name}}</h5>
-      <app-nft-price [price]="nft.price"></app-nft-price>
-      <div class="d-flex justify-content-center mt-3">
-        <a href="#" class="btn btn-primary">Ajouter au panier</a>
-      </div>
+      <div *ngIf="nft.isFavorite">❤️</div>
+    </div>
+    <app-nft-price [price]="nft.price"></app-nft-price>
+    <div class="d-flex flex-column justify-content-center mt-3">
+      <app-favorite-nft class="mb-2" [isFavorite]="nft!.isFavorite"
+                        (isFavoriteChange)="onFavoriteChange($event)"></app-favorite-nft>
+      <a href="#" class="btn btn-primary">Ajouter au panier</a>
     </div>
   </div>
+</div>

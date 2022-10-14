@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Nft } from "../model/nfts.model";
 
 @Component({
   selector: 'app-nft-price',

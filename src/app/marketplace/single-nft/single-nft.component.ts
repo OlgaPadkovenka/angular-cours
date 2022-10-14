@@ -28,11 +28,11 @@ export class SingleNFTComponent implements OnInit {
     isFavorite : false,
     price: 0.898
   }
-
-
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  onFavoriteChange(newIsFavorite: boolean) {
+    this.nft.isFavorite = newIsFavorite;
+  }
 }
