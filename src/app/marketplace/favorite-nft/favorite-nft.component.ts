@@ -12,6 +12,7 @@ export class FavoriteNftComponent implements OnInit {
   public btnFavorisLabel: string = "Ajouter en favoris";
 
   @Output()
+
   public isFavoriteChange = new EventEmitter();
 
   ngOnInit(): void {
@@ -19,6 +20,12 @@ export class FavoriteNftComponent implements OnInit {
 
   onFavoriteBtnClick(): void {
     this.isFavorite = !this.isFavorite;
+if(this.isFavorite) {
+    this.btnFavorisLabel = "Retirer des favoris"
+} else {
+  this.btnFavorisLabel = " Ajouter en favoris"
+}
+
     this.isFavoriteChange.emit(this.isFavorite);
   }
 
