@@ -10,7 +10,6 @@ export class NftPriceComponent implements OnInit {
   //paramètre price
   @Input()
   public price: number | undefined = 0; 
-
   constructor() { }
 
   ngOnInit(): void {
