@@ -5,6 +5,7 @@ import { NftPriceComponent } from './nft-price/nft-price.component';
 import { FavoriteNftComponent } from './favorite-nft/favorite-nft.component';
 import { ListNftComponent } from './list-nft/list-nft.component';
 import { DescriptionComponent } from './description/description.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -18,12 +19,9 @@ import { DescriptionComponent } from './description/description.component';
     DescriptionComponent,
 
   ],
-  exports: [
-    ListNftComponent
-
-  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class MarketplaceModule { }
