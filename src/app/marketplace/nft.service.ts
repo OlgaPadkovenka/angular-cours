@@ -18,9 +18,11 @@ export class NftService {
     .set('include', 'all')
     .set('page_size', '20');
 
+    const contractId = '0x248a74f64bbf422dae243ed5d58ef0dd7298b972';
+
       return this.http.get<Nfts>(
         //url
-        `${environment.baseUrl}0x248a74f64bbf422dae243ed5d58ef0dd7298b972`, {headers, params,  observe: "response"}
+        `${environment.baseUrl}` + `${contractId}`, {headers, params,  observe: "response"}
       );
   }
 }
