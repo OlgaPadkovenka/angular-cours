@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { MarketplaceModule } from './marketplace/marketplace.module';
 import {HttpClientModule} from "@angular/common/http";
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     MarketplaceModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
