@@ -12,6 +12,7 @@ import { NftService } from '../nft.service';
 export class ListNftComponent implements OnInit {
 
   public nfts : Array<Nft> = [];
+  public isLoading : boolean = false;
 
   constructor(private nftService: NftService) { 
     //ne pas appeler le service dans le constructeur
@@ -35,12 +36,14 @@ export class ListNftComponent implements OnInit {
        });
 */
    // Bonus 1 et 2
+    this.isLoading = true;
     this.nftService.getAll().pipe(
       map(res => res.body),
       switchMap(body => body!.nfts),
       filter(nft => nft.metadata!.hasOwnProperty('edition'))
     ).subscribe(
       nft => {
+        this.isLoading = false;
         this.nfts.push(nft);
       });
       

@@ -1,5 +1,16 @@
-<div class="d-flex justify-content-between flex-wrap">
+
+<div class="d-flex justify-content-between flex-wrap" *ngIf="!isLoading; else loader">
     <div *ngFor = "let nft of nfts">
         <app-single-nft [nft]="nft"></app-single-nft>
     </div>
 </div>
+<ng-template #loader>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center w-100">
+        <div class="spinner-grow text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
