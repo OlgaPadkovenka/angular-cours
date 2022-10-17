@@ -19,11 +19,7 @@ export class ListNftComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
-  //this.nftService.getAll().subscribe((response) => {
-  //this.nfts = response.body!.nfts;
- //});
- this.fetchData();
+    this.fetchData();
   }
 
   private fetchData(): void {
