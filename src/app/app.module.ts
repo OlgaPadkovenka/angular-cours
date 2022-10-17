@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MarketplaceModule } from './marketplace/marketplace.module';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { MarketplaceModule } from './marketplace/marketplace.module';
   ],
   imports: [
     BrowserModule,
-    MarketplaceModule
+    MarketplaceModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
