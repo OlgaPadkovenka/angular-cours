@@ -1,5 +1,5 @@
 <div class="card" style="width: 18rem;">
-  <img [src]="nft.cached_file_url" class="card-img-top" alt="{{nft.metadata!.name}}">
+  <img routerLink="description" [src]="nft.cached_file_url" class="card-img-top" alt="{{nft.metadata!.name}}">
   <div class="card-body">
     <div class="d-flex justify-content-between">
       <h5 class="card-title">{{nft.metadata!.name}}</h5>
