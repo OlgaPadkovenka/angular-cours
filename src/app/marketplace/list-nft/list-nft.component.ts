@@ -26,26 +26,24 @@ export class ListNftComponent implements OnInit {
   }
 
   private fetchData(): void {
-    // Sans bonus
+   /* // Sans bonus
     this.nftService.getAll().pipe(
        map(res => res.body),
      ).subscribe(
        nfts => {
          this.nfts = nfts!.nfts;
        });
-
- /*  // Bonus 1 et 2
-    this.isLoading = true;
+*/
+   // Bonus 1 et 2
     this.nftService.getAll().pipe(
       map(res => res.body),
       switchMap(body => body!.nfts),
       filter(nft => nft.metadata!.hasOwnProperty('edition'))
     ).subscribe(
       nft => {
-        this.isLoading = false;
         this.nfts.push(nft);
       });
-      */
+      
   }
 
 }
