@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: 'https://api.nftport.xyz/v0/nfts/',
-  apikey: '5940a757-0d5b-4f48-92a9-50a968817631'
+  apiKey: '5940a757-0d5b-4f48-92a9-50a968817631'
 };
 
 /*

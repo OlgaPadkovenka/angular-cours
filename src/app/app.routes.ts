@@ -4,5 +4,5 @@ import { ListNftComponent } from "./marketplace/list-nft/list-nft.component";
 
 export const ROUTES: Routes = [
     {path: '', component: ListNftComponent},
-    {path: 'description', component: DescriptionComponent}
+    {path: 'description/:blockchain/:contractId/:token', component: DescriptionComponent}
 ]
