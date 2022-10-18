@@ -8,6 +8,7 @@ import { DescriptionComponent } from './description/description.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from '../user/login/login.component';
+import { RegisterComponent } from '../user/register/register.component';
 
 
 
@@ -19,7 +20,8 @@ import { LoginComponent } from '../user/login/login.component';
     FavoriteNftComponent,
     ListNftComponent,
     DescriptionComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
 
   ],
   imports: [

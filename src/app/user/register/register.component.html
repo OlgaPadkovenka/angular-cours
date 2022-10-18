@@ -1,0 +1,67 @@
+<form (ngSubmit)="onRegister()" [formGroup]="registerForm">
+    <div class="mb-3 row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <label for="inputLogin" class="col-sm-2 col-form-label">Login</label>
+        <div class="col-sm-10 w-100">
+          <input type="login" name="login" class="form-control" id="inputLogin" formControlName="login">
+        </div>
+        <div *ngIf="registerForm.get('login')!.dirty && registerForm.get('login')!.touched">
+          <div class="mt-2"  *ngIf="registerForm.get('login')!.hasError('required')">
+            Un login est requis
+          </div>
+          <div class="mt-2"  *ngIf="registerForm.get('login')!.hasError('minlength')">
+            Le login doit contenir au moins trois caractères
+          </div>
+        </div>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <div class="mb-3 row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10 w-100">
+          <input type="email" name="email" class="form-control" id="inputEmail" formControlName="email">
+        </div>
+        <div *ngIf="registerForm.get('email')!.dirty && registerForm.get('email')!.touched">
+          <div class="mt-2" *ngIf="registerForm.get('email')!.hasError('required')">
+            Un email est requis
+          </div>
+          <div class="mt-2" *ngIf="registerForm.get('email')!.hasError('minlength')">
+            L'email doit contenir au moins trois caractères
+          </div>
+          <div class="mt-2"  *ngIf="registerForm.get('email')!.hasError('email')">
+            Veuillez rentrer un email valide
+          </div>
+        </div>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <div class="mb-3 row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <label for="inputPassword" class="col-form-label">Mot de passe</label>
+        <div class="col-sm-10 w-100">
+          <input type="password" name="password" minlength="3" class="form-control" id="inputPassword"
+                 formControlName="password">
+        </div>
+        <div *ngIf="registerForm.get('password')!.dirty && registerForm.get('password')!.touched">
+          <div class="mt-2" *ngIf="registerForm.get('password')!.hasError('required')">
+            Un mot de passe est requis
+          </div>
+          <div class="mt-2" *ngIf="registerForm.get('password')!.hasError('minlength')">
+            Le mot de passe doit être d'au moins 10 caractères.
+          </div>
+        </div>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <div class="mb-3 row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button class="btn btn-primary w-100" [disabled]="registerForm.invalid">S'enregistrer</button>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </form>
