@@ -6,6 +6,7 @@ import { MarketplaceModule } from './marketplace/marketplace.module';
 import {HttpClientModule} from "@angular/common/http";
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
+import { LoginComponent } from './user/login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { ROUTES } from './app.routes';
     BrowserModule,
     MarketplaceModule,
     HttpClientModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
   ],
   providers: [],
   bootstrap: [AppComponent]

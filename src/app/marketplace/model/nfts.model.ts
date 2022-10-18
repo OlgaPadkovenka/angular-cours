@@ -99,3 +99,8 @@ export interface ContractMetadata {
     response: string;
     nft: Nft;
   }
+
+  export interface UserLogin {
+    email?: string;
+    password?: string;
+  }

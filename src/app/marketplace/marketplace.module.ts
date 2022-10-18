@@ -6,6 +6,8 @@ import { FavoriteNftComponent } from './favorite-nft/favorite-nft.component';
 import { ListNftComponent } from './list-nft/list-nft.component';
 import { DescriptionComponent } from './description/description.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from '../user/login/login.component';
 
 
 
@@ -17,11 +19,14 @@ import { RouterModule } from '@angular/router';
     FavoriteNftComponent,
     ListNftComponent,
     DescriptionComponent,
+    LoginComponent
 
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class MarketplaceModule { }
